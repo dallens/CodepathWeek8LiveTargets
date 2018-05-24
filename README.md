@@ -62,7 +62,7 @@ Time spent: **20** hours spent in total
 ### 5. Cross-Site Request Forgery:
   - [ ] Summary: 
 		1. The red site was vulnerable to CSRF. However, the green site's vulnerability to XSS was needed in order to cause the form to be submitted to the red site by the admin logged into the green site.
-  - [ ] GIF Walkthrough: ![](https://github.com/dallens/CodepathWeek8LiveTargets/blob/master/W8_BlueSessionHijack.gif)W8_RedCSRF.gif
+  - [ ] GIF Walkthrough: ![](https://github.com/dallens/CodepathWeek8LiveTargets/blob/master/W8_RedCSRF.gif)
 ### 6. Session Hijacking/Fixation
   - [ ] Summary: 
 		1. Sessions may be hijacked on the blue site. 
