@@ -74,11 +74,11 @@ IDOR and User Enumeration were by far the fastest and least technically demandin
 ### *What is a good rule of thumb which would prevent accidentally username enumeration vulnerabilities like the one created here?*
 Ensuring that returned page results or messages for both valid/existing users and for invalid users are the same. This can be accomplished with software tests that perform a diff of the results between the failed invalid user logon and the failed valid one. 
 ### *Since you should be somewhat familiar with the CMS and how it was coded, can you think of another resource which could be made vulnerable to an Insecure Direct Object Reference? What code could be removed which would expose it? (Hint: It was also the answer to the first bonus objective to the Weekly Assignment for week 3.)*
-Based on my understanding of the question and assignment reference, the backend database would be vulnerable if we stick to the definition that IDOR is unauthenticated access to a resource that should require authorization. The piece of code that would prevent this related to week 3 is input validation, or whitelisting characters and sanitizing input.
+After some in-depth discussion and review, the best answer relates to the .php files, such as index.php, etc. that give the website its functionality. By allowing reference to these source files directly, the code can reveal vulnerabilities and functionality that would aid the attacker in their malicious pursuits. Based on my initial understanding of the question and assignment reference, the backend database would be vulnerable if we stick to the definition that IDOR is unauthenticated access to a resource that should require authorization. The piece of code that would prevent this is related to checking for any type of authentication or access rights.
 ###  *Many SQL Injections use OR as part of the injected code. (For example: ' OR 1=1 --'.) Could AND work just as well in place of OR? (For example: ' AND 1=1 --'.) Why or why not?*
 Although useful in its own right, the AND would not substitue for an OR. The reason relates to the intended logic of the SQL statement with an OR 1=1 (which is intended to always return TRUE regardless of the other value) and using an AND. The AND adds an additional condition that must be met. For example, if you know the state of one parameter as TRUE, you can test another parameter for being TRUE/FALSE through the use of the AND. If that new parameter is FALSE the entire statement will return false. The AND is useful in blind SQLi beacuse of this indirect answer that doesn't rely on listed output.
 ### *A stored XSS attack requires patience because it could be stored for months before being triggered. Because of this, what important ingredient would an attacker most likely include in a stored XSS attack script?*
-The element I can think of is a domain that will still resolve to an attacker's site even if that site has moved, or an active site that the script points to for callback or file downloads. A rod still connected to the line and hook as an analogy.
+The element I can think of is a domain that will still resolve to an attacker's site even if that site has moved, or an active site that the script points to for callback or file downloads. A rod that remains persistently connected to the line and hook as an analogy.
 ### *Imagine that one of your classmates is an authorized admin for the site's CMS and you are not. How would you get them to visit the self-submitting, hidden form page you created in Objective #5 (CSRF)?*
 A small bit of social engineering would take care of that. Perhaps a comment that you heard someone posted a feedback comment that was scathing/harmful to the authorized admin's reputation or something that is known to bring them worry. Essentially create enough curiosity or concern to cause them to personally log in look at the feedback.
 ### *Compare session hijacking and session fixation. Which attack do you think is easier for an attacker to execute? Why? One of them is much easier to defend against than the other. Which one and why?*
@@ -100,7 +100,7 @@ Describe any challenges encountered while doing the work
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
